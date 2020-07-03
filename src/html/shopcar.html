@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/shopcar.css">
+    <link rel="stylesheet" href="../font/font-msg/iconfont.css">
+    <link rel="stylesheet" href="../font/font-index/iconfont.css">
+    <script src="../font/font-index/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 版心 -->
+    <div id="wrap">
+
+        <!-- 购物车头部 -->
+        <div id="header-wrap">
+            <div id="header">
+                <a href="javascript:;">
+                    <img src="../img/shopcar-img/header-img/logo.png" alt="">
+                </a>
+                <i>购物车</i>
+                <em>>&nbsp;&nbsp;确认订单&nbsp;&nbsp;>&nbsp;&nbsp;在线支付&nbsp;&nbsp;>&nbsp;&nbsp;完成</em>
+                <b>我的订单</b>
+                <strong>我的商城<i></i>
+                    <ul id="my-msg">
+                        <li>地址管理</li>
+                        <li>我的收藏</li>
+                        <li>我的回购金</li>
+                        <li>问题反馈</li>
+                        <a href="javascript:;">退出</a>
+                        
+                    </ul>
+                </strong>
+            </div>
+        </div>
+
+        <!-- 商品信息 -->
+        <div id="msg-wrap">
+            <div id="msg">
+                <div class="msg-line1">
+                    <label for="quanxuan">
+                        <input type="checkbox" id="quanxuan" class="cbx">&nbsp;&nbsp;全选
+                    </label>
+                    <p>
+                        <i>单价(元)</i>
+                        <i>数量</i>
+                        <i>小计(元)</i>
+                        <a href="javascript:;">编辑</a>
+                    </p>
+                </div>
+
+                <div class="msg-line2">
+                    <div class="msg-wrap">
+                        <input type="checkbox" class="cbx">
+                        <dl class="msg-img">
+                            <dt><img src="../img/shopcar-img/product-img/1.png" alt=""></dt>
+                            <dd>
+                                <i class="title">魅族 16T</i>
+                                <i class="detail">全网公开版 鲸跃蓝 8+128GB</i>
+                            </dd>
+                        </dl>
+                    </div>
+                    <span class="price">￥2299.00</span>
+                    <div class="btn-wrap">
+                        <button>-</button>
+                        <input type="text" value="1" class="num">
+                        <button>+</button>
+                    </div>
+                    <span class="totalprice">￥2299.00</span>
+                    <span>--</span>
+                </div>
+
+                <div class="msg-line2">
+                    <div class="msg-wrap">
+                        <input type="checkbox" class="cbx">
+                        <dl class="msg-img">
+                            <dt><img src="../img/shopcar-img/product-img/2.png" alt=""></dt>
+                            <dd>
+                                <i class="title">魅族 17 Pro</i>
+                                <i class="detail">全网公开版 天青 12+256GB</i>
+                            </dd>
+                        </dl>
+                    </div>
+                    <span class="price">￥4699.00</span>
+                    <div class="btn-wrap">
+                        <button>-</button>
+                        <input type="text" value="1" class="num">
+                        <button>+</button>
+                    </div>
+                    <span class="totalprice">￥4699.00</span>
+                    <span>--</span>
+                </div>
+                <div class="msg-line3"></div>
+            </div>
+        </div>
+
+        <!-- 网页脚部 -->
+        <div style="overflow: hidden; height: 250px;">
+            <div class="flyme-wrap" id="footer-wrap">
+                <div id="footer-line1">
+                    <div class="foot-line1-lf">
+                        <a href="javascript:;">
+                            <img src="../img/shopcar-img/footer-img/footer-line1-1.png" alt="">
+                            <em>满80免运费</em>
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/shopcar-img/footer-img/footer-line1-2.png" alt="">
+                            <em>100+ 城市次日送达</em>
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/shopcar-img/footer-img/footer-line1-3.png" alt="">
+                            <em>7天无理由退货</em>
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/shopcar-img/footer-img/footer-line1-4.png" alt="">
+                            <em>15天换货保障</em>
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/shopcar-img/footer-img/footer-line1-5.png" alt="">
+                            <em>1年免费保修</em>
+                        </a>
+                        <a href="javascript:;">
+                            <img src="../img/shopcar-img/footer-img/footer-line1-6.png" alt="">
+                            <em>上门快修</em>
+                        </a>
+                    </div>
+                    <div class="foot-line1-rt">
+                        <p>周一至周日 8:00-20:00</p>
+                        <i>400-788-3333</i>
+                        <span>在线客服</span>
+                    </div>
+                </div>
+                <div id="footer-line2">
+                    <div class="footer-line2-lf">
+                        <a href="javascript:;" class="a-top" style="padding-left: 0px;">了解魅族</a>
+                        <a href="javascript:;" class="a-top">加入我们</a>
+                        <a href="javascript:;" class="a-top">联系我们</a>
+                        <a href="javascript:;" class="a-top">Flyme</a>
+                        <a href="javascript:;" class="a-top">魅族社区</a>
+                        <a href="javascript:;" class="a-top">天猫旗舰店</a>
+                        <a href="javascript:;" class="a-top">问题反馈</a>
+                        <a href="javascript:;" class="a-top">线上销售授权名单公示</a>
+                        <a href="javascript:;" class="a-top">出版物经营许可证</a>
+                        <i>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-guoqi"></use>
+                            </svg> <span>简体中文</span>
+                        </i>
+                        <div class="footer-line"></div>
+                        <em>©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                        <a href="javascript:;" class="a-bottom">粤ICP备13003602号</a>
+                        <a href="javascript:;" class="a-bottom">合字B2-20170010 </a>
+                        <a href="javascript:;" class="a-bottom">营业执照</a>
+                        <a href="javascript:;" class="a-bottom">法律声明</a>
+                        <b class="iconfont icon-gongan
+                        "></b><a href="javascript:;" class="a-bottom">
+                            粤公网安备 44049102496009 号</a>
+                        <strong class="iconfont icon-dunpai"></strong>
+                        <strong class="iconfont icon-police-car
+                        "></strong>
+                        <strong class="iconfont icon-chengxin"></strong>
+                    </div>
+                    <div class="footer-line2-rt">
+                        <i class="iconfont icon-lianjie">
+                            <img src="../img/shopcar-img/footer-img/link.png" alt="">
+                        </i>
+                        <i class="iconfont icon-weixin">
+                            <img src="../img/shopcar-img/footer-img/wechat.jpg" alt="">
+                        </i>
+                        <i class="iconfont icon-QQkongjian"></i>
+                        <i class="iconfont icon-sina"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

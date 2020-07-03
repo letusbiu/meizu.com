@@ -1,0 +1,30 @@
+{
+  "id": "1917380",
+  "name": "login",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "378143",
+      "name": "新浪",
+      "font_class": "xinlang",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "10591530",
+      "name": "消 息",
+      "font_class": "xiaoxi",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "11156974",
+      "name": "qq空间",
+      "font_class": "qqkongjian",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

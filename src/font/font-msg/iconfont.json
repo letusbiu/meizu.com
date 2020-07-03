@@ -1,0 +1,44 @@
+{
+  "id": "1912429",
+  "name": "phoneMsg",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3589345",
+      "name": "对号",
+      "font_class": "duihao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5110200",
+      "name": "问号",
+      "font_class": "wenhao",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "5748213",
+      "name": "客服",
+      "font_class": "ziyuan",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "189486",
+      "name": "对比",
+      "font_class": "duibi",
+      "unicode": "eb7f",
+      "unicode_decimal": 60287
+    },
+    {
+      "icon_id": "5903638",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    }
+  ]
+}

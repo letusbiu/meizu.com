@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录账号</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../font/font-login/iconfont.css">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#tabs>ul>li').on('click', function() {
+                let index = $('#tabs>ul>li').index(this);
+                $(this).addClass('actived').siblings().removeClass('actived');
+                $('#tabs>div').eq(index).addClass('show').siblings().removeClass('show');
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- 版心 -->
+    <div id="wrap">
+        <!-- 头部 -->
+        <div id="header">
+            <img src="../img/login-img/logo.png" alt="">
+        </div>
+
+        <!-- 登录 -->
+        <div style="height: 750px;">
+            <div id="login-wrap">
+                <form action="javascript:;" id="login">
+                    <div id="tabs">
+                        <ul>
+                            <li class="actived">账号登录</li>
+                            <span></span>
+                            <li>二维码登录</li>
+                        </ul>
+                        <div class="show" id="denglu">
+                            <input type="text" placeholder="手机号/Flyme 账号" maxlength="11">
+                            <input type="password" placeholder="密码">
+                            <input type="button" value="点击按钮进行验证" class="btn">
+
+                            <label for="remember">
+                            <input type="checkbox" id="remember">
+                            记住登陆状态
+                        </label>
+                            <button>登录</button>
+                            <p>
+                                <a href="../../zhuce/html/zhuce.html">注册</a>
+                                <a href="javascript:;">忘记密码？</a>
+                            </p>
+
+                        </div>
+
+                        <div id="erweima">
+                            <img src="../img/login-img/mzQrShow.jpg" alt="">
+                            <p>请使用账号中心右上角或最新的Flyme系统相机扫码功能，扫码登录</p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 脚部 -->
+        <div id="foot">
+            <div id="foot-line1">
+                <p>
+                    <a href="javascript:;">关于魅族</a><span></span>
+                    <a href="javascript:;">工作机会</a><span></span>
+                    <a href="javascript:;">联系我们</a><span></span>
+                    <a href="javascript:;">法律声明</a><span></span>
+                    <a href="javascript:;">常见问题</a><span></span>
+                    <a href="javascript:;">简体中文</a>
+                </p>
+                <p>
+                    <span>客服热线&nbsp;&nbsp;&nbsp;400-788-3333</span>
+                    <a href="javascript:;">在线客服</a>
+                </p>
+                <p>
+                    <i class="iconfont icon-xinlang"></i>
+                    <i class="iconfont icon-xiaoxi">
+                        <img src="../img/login-img/wechat.jpg" alt="">
+                    </i>
+                    <i class="iconfont icon-qqkongjian"></i>
+                </p>
+            </div>
+            <div id="foot-line2">
+                <span>©<script type="text/javascript">document.write(new Date().getFullYear());</script>Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+                <a href="javascript:;">备案号: 粤ICP备13003602号-4</a>
+                <a href="javascript:;">经营许可证编号: 粤B2-20130198</a>
+                <a href="javascript:;">营业执照</a>
+                <i><img src="../img/login-img/ghs.png" alt="">粤公网安备 44049102496076号</i>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
