@@ -7,6 +7,13 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 #header-wrap {
   width: 6200px;
   position: absolute;
@@ -127,7 +134,8 @@ body {
   top: 81px;
   background: #F4F6FA;
   overflow: hidden;
-  height: 500px;
+  height: 800px;
+  border: 1px solid black;
 }
 #msg-wrap > #msg {
   width: 1240px;
@@ -185,6 +193,60 @@ body {
   margin-top: 10px;
   font-family: "PingFang SC", "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", Arial, Helvetica, sans-serif, "\5B8B\4F53";
 }
+.msg-line2 a {
+  display: inline-block;
+  background: #00c3f5;
+  color: #fff;
+  font-size: 12px;
+  width: 40px;
+  height: 20px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 20px;
+}
+.msg-line3 {
+  width: 100%;
+  height: 70px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.msg-line3 > label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1;
+  user-select: none;
+}
+.msg-line3 > p {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 20px;
+}
+.msg-line3 > p > i {
+  font-size: 18px;
+  color: #e02b41;
+}
+.msg-line3 > p > .zongjia {
+  display: inline-block;
+  width: 90px;
+}
+.msg-line3 > p > a {
+  width: 80px;
+  height: 30px;
+  background: #f66567;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin-left: 20px;
+}
 .msg-wrap {
   box-sizing: border-box;
   width: 570px;
@@ -225,7 +287,13 @@ body {
   display: flex;
   margin-right: 100px;
 }
-.btn-wrap > button {
+.btn-wrap .btnup {
+  width: 24px;
+  height: 24px;
+  color: #595959;
+  box-sizing: border-box;
+}
+.btn-wrap .btndown {
   width: 24px;
   height: 24px;
   color: #595959;
@@ -245,7 +313,7 @@ body {
   width: 6200px;
   position: absolute;
   left: -2480px;
-  top: 600px;
+  top: 880px;
   background: #fff;
   height: 250px;
 }

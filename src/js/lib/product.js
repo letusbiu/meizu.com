@@ -2,9 +2,9 @@ let baseUrl = "http://localhost/meizu.com"; // 基础路径
 
 let pic = "/src/img/details-img/phone-adv-img/"
 
-define(['jquery', 'lazyload'], function($, lazyload) {
+define(['jquery', 'lazyload', 'cookie'], function($, lazyload, cookie) {
     return {
-        render: function() {
+        render: function(callback) {
             //从地址栏 获取主页传来的id
             let id = location.search.split("=")[1];
             // console.log(id);
@@ -28,10 +28,10 @@ define(['jquery', 'lazyload'], function($, lazyload) {
                         <img src="${baseUrl}${pic}${elm.pic}" alt="">
 
                         <ul>
-                            <li><img src="../img/phoneMsg-img/phoneMsg-small-1.jpg" alt=""></li>
-                            <li><img src="../img/phoneMsg-img/phoneMsg-small-2.jpg" alt=""></li>
-                            <li><img src="../img/phoneMsg-img/phoneMsg-small-3.jpg" alt=""></li>
-                            <li><img src="../img/phoneMsg-img/phoneMsg-small-4.jpg" alt=""></li>
+                            <li><img src="../img/details-img/phoneMsg-img/phoneMsg-small-1.jpg" alt=""></li>
+                            <li><img src="../img/details-img/phoneMsg-img/phoneMsg-small-2.jpg" alt=""></li>
+                            <li><img src="../img/details-img/phoneMsg-img/phoneMsg-small-3.jpg" alt=""></li>
+                            <li><img src="../img/details-img/phoneMsg-img/phoneMsg-small-4.jpg" alt=""></li>
                         </ul>
 
                         <p>
@@ -105,9 +105,9 @@ define(['jquery', 'lazyload'], function($, lazyload) {
                         <dl class="phone-type">
                             <dt class="dtstyle">颜色分类</dt>
                             <dd>
-                                <a href="javascript:;" class="p-type p-pic"><img src="../img/phoneMsg-img/phone-color-1.png" alt=""> 乌金</a>
-                                <a href="javascript:;" class="p-type p-pic"><img src="../img/phoneMsg-img/phone-color-2.png" alt="">定白</a>
-                                <a href="javascript:;" class="a-black p-type p-pic"><img src="../img/phoneMsg-img/phone-color-3.png" alt="">天青</a>
+                                <a href="javascript:;" class="p-type p-pic"><img src="../img/details-img/phoneMsg-img/phone-color-1.png" alt=""> 乌金</a>
+                                <a href="javascript:;" class="p-type p-pic"><img src="../img/details-img/phoneMsg-img/phone-color-2.png" alt="">定白</a>
+                                <a href="javascript:;" class="a-black p-type p-pic"><img src="../img/details-img/phoneMsg-img/phone-color-3.png" alt="">天青</a>
                             </dd>
                         </dl>
                         <!-- 内存容量 -->
@@ -142,7 +142,7 @@ define(['jquery', 'lazyload'], function($, lazyload) {
                         <dl class="phone-type">
                             <dt class="dtstyle">数量</dt>
                             <dd class="product-num">
-                                <button class="btndown">-</button>
+                                <button class="btndown" min="1">-</button>
                                 <input type="text" value="1" class="num">
                                 <button class="btnup">+</button>
                             </dd>
@@ -150,31 +150,58 @@ define(['jquery', 'lazyload'], function($, lazyload) {
 
                         <div class="buy-wrap">
                             <a href="javascript:;" class="buy-now">立即购买</a>
-                            <a href="javascript:;" class="addcar">加入购物车</a>
+                            <a href="http://localhost/meizu.com/src/html/shopcar.html" class="addcar">加入购物车</a>
                         </div>
                     </div>
 
-                </div>
-                    `;
+                </div>`;
 
                     //将数据放入页面
                     $('#phoneMsg-wrap').append(temp);
 
                     // $('.sticky-name').innerhtml = `${elm.title}`;
                     $('#sticky-name').html(`${elm.title}`);
-                    // callback && callback(res.id, res.price);
+                    callback && callback(elm.id, elm.price);
                 }
 
             });
-            $('.btndown').on('click', function() {
-                alert(1);
-            })
         },
         //懒加载
         lazyload: function() {
             $("img.lazy").lazyload({
                 effect: "fadeIn"
             })
+        },
+        addItem: function(id, price, num) {
+            // shop
+            let shop = cookie.get('shop'); // 获取cookie中的购物车 
+            // 获取是为了判断它是否存在
+            // 不存在 创建
+            // 存在 修改
+
+            let product = {
+                id: id,
+                price: price,
+                num: num
+            }
+
+            if (shop) { // 存在
+                shop = JSON.parse(shop); // 将字符串转成数组
+                // 数组中已经存在了商品的id
+                // 只修改num只 而不是将商品放入数组
+                if (shop.some(elm => elm.id == id)) {
+                    shop.forEach(elm => {
+                        elm.id == id ? elm.num = num : null;
+                    });
+                } else {
+                    shop.push(product);
+                }
+            } else {
+                shop = []; // 不存在新建数组
+                shop.push(product); // 放入商品
+            }
+
+            cookie.set('shop', JSON.stringify(shop), 1);
         }
     }
 });

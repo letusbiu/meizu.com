@@ -10,15 +10,7 @@
     <link rel="stylesheet" href="../font/font-msg/iconfont.css">
     <link rel="stylesheet" href="../font/font-index/iconfont.css">
     <script src="../font/font-index/iconfont.js"></script>
-    <style>
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
+    <script src="../js/require.js" data-main="../js/main.shopcar.js"></script>
 </head>
 
 <body>
@@ -52,7 +44,7 @@
             <div id="msg">
                 <div class="msg-line1">
                     <label for="quanxuan">
-                        <input type="checkbox" id="quanxuan" class="cbx">&nbsp;&nbsp;全选
+                        <input type="checkbox" id="quanxuan" class="cbx quanxuan">&nbsp;&nbsp;全选
                     </label>
                     <p>
                         <i>单价(元)</i>
@@ -62,7 +54,7 @@
                     </p>
                 </div>
 
-                <div class="msg-line2">
+                <!-- <div class="msg-line2">
                     <div class="msg-wrap">
                         <input type="checkbox" class="cbx">
                         <dl class="msg-img">
@@ -80,7 +72,7 @@
                         <button>+</button>
                     </div>
                     <span class="totalprice">￥2299.00</span>
-                    <span>--</span>
+                    <span><a href="javascript:;">删除</a></span>
                 </div>
 
                 <div class="msg-line2">
@@ -101,9 +93,61 @@
                         <button>+</button>
                     </div>
                     <span class="totalprice">￥4699.00</span>
-                    <span>--</span>
+                    <span><a href="javascript:;">删除</a></span>
                 </div>
-                <div class="msg-line3"></div>
+
+                <div class="msg-line2">
+                    <div class="msg-wrap">
+                        <input type="checkbox" class="cbx">
+                        <dl class="msg-img">
+                            <dt><img src="../img/shopcar-img/product-img/2.png" alt=""></dt>
+                            <dd>
+                                <i class="title">魅族 17 Pro</i>
+                                <i class="detail">全网公开版 天青 12+256GB</i>
+                            </dd>
+                        </dl>
+                    </div>
+                    <span class="price">￥4699.00</span>
+                    <div class="btn-wrap">
+                        <button>-</button>
+                        <input type="text" value="1" class="num">
+                        <button>+</button>
+                    </div>
+                    <span class="totalprice">￥4699.00</span>
+                    <span><a href="javascript:;">删除</a></span>
+                </div>
+
+                <div class="msg-line2">
+                    <div class="msg-wrap">
+                        <input type="checkbox" class="cbx">
+                        <dl class="msg-img">
+                            <dt><img src="../img/shopcar-img/product-img/2.png" alt=""></dt>
+                            <dd>
+                                <i class="title">魅族 17 Pro</i>
+                                <i class="detail">全网公开版 天青 12+256GB</i>
+                            </dd>
+                        </dl>
+                    </div>
+                    <span class="price">￥4699.00</span>
+                    <div class="btn-wrap">
+                        <button>-</button>
+                        <input type="text" value="1" class="num">
+                        <button>+</button>
+                    </div>
+                    <span class="totalprice">￥4699.00</span>
+                    <span><a href="javascript:;">删除</a></span>
+                </div> -->
+
+                <div class="msg-line3">
+                    <label for="quanxuan2">
+                        <input type="checkbox" id="quanxuan2" class="cbx quanxuan">&nbsp;&nbsp;全选
+                    </label>
+
+                    <p>
+                        <i>总价: ￥</i><i class="zongjia">0</i>
+                        <a href="javascript:;">结算</a>
+                    </p>
+                </div>
             </div>
         </div>
 
