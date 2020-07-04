@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/zhuce.css">
     <link rel="stylesheet" href="../font/font-login/iconfont.css">
+    <script src="../js/require.js" data-main="../js/main.zhuce.js"></script>
+
 </head>
 
 <body>
@@ -16,6 +18,7 @@
         <!-- 头部 -->
         <div id="header">
             <img src="../img/zhuce-img/logo.png" alt="">
+
         </div>
 
         <!-- 登录 -->
@@ -23,13 +26,17 @@
             <div id="login-wrap">
                 <form action="javascript:;" id="zhuce">
                     <p>注册 Flyme 账号</p>
-                    <input type="text" placeholder="手机号码">
-                    <input type="button" value="点击按钮进行验证">
+                    <div class="remind1"></div>
+                    <input type="text" placeholder="手机号码" class="phonenum" maxlength="11">
+                    <div class="remind2"></div>
+                    <input type="password" placeholder="设置密码" class="password" maxlength="16">
+                    <div class="remind3"></div>
+                    <input type="button" value="点击按钮进行验证" class="yanzheng">
                     <div class="xieyi">
                         <input type="checkbox">注册账号即表示您同意并愿意遵守 <a href="javascript:;">Flyme账号服务协议</a>、<a href="javascript:;">法律声明 </a>和 <a href="javascript:;">隐私协议</a>
                     </div>
-                    <input type="submit" id="sub" value="立即注册">
-                    <a href="../../login/html/login.html">登录</a>
+                    <input type="submit" id="sub" value="立即注册" disabled>
+                    <a href="http://localhost/meizu.com/src/html/login.html">登录</a>
                 </form>
             </div>
         </div>

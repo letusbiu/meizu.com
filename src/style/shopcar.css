@@ -135,7 +135,6 @@ body {
   background: #F4F6FA;
   overflow: hidden;
   height: 800px;
-  border: 1px solid black;
 }
 #msg-wrap > #msg {
   width: 1240px;

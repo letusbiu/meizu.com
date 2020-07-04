@@ -74,6 +74,7 @@ body {
 }
 #tabs #denglu > .btn {
   color: #666666;
+  opacity: 0;
 }
 #tabs #denglu > label {
   user-select: none;
@@ -95,7 +96,7 @@ body {
   height: 46px;
   background: #387aff;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 #tabs #denglu > p {
