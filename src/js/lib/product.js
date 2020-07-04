@@ -150,7 +150,7 @@ define(['jquery', 'lazyload', 'cookie'], function($, lazyload, cookie) {
 
                         <div class="buy-wrap">
                             <a href="javascript:;" class="buy-now">立即购买</a>
-                            <a href="http://localhost/meizu.com/src/html/shopcar.html" class="addcar">加入购物车</a>
+                            <a href="javascript:;" class="addcar">加入购物车</a>
                         </div>
                     </div>
 

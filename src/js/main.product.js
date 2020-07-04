@@ -12,7 +12,7 @@ require.config({
 
 
 // 使用模块 请求数据
-require(['product'], function(product) {
+require(['product', 'cookie'], function(product, cookie) {
     product.render(function(id, price) {
         $('.btndown').on('click', function() {
             if ($('.num').val() >= 2) {
@@ -24,7 +24,14 @@ require(['product'], function(product) {
         })
 
         $('.addcar').on('click', function() {
-            product.addItem(id, price, $('.num').val());
+            let cooo = cookie.get('user');
+            if (!cooo) {
+                location.href = "http://localhost/meizu.com/src/html/login.html"
+            } else {
+                product.addItem(id, price, $('.num').val());
+                $('.addcar').attr('href', 'http://localhost/meizu.com/src/html/shopcar.html')
+                console.log(1);
+            }
         })
     });
     product.lazyload();

@@ -6,6 +6,6 @@ require.config({
     }
 });
 
-require(['shopcar', 'cookie'], function(shopcar, cookie) {
+require(['shopcar'], function(shopcar) {
     shopcar.render();
 })

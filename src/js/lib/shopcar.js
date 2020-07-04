@@ -156,6 +156,11 @@ define(['jquery', 'cookie'], function($, cookie) {
                             //放入相应的地方
                             $('.zongjia').text(zongjia)
 
+                        });
+                        //退出功能
+                        $('.exit').on('click', function() {
+                            cookie.remove('user');
+                            location.href = "http://localhost/meizu.com/src/html/index.html"
                         })
 
                     }
