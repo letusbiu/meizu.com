@@ -3,10 +3,10 @@ let baseUrl = "http://localhost/meizu.com"; // 基础路径
 let pic = "/src/img/index-img/phone-adv-img/"
 
 
-define(['jquery', 'HappyImage', 'lazyload'], function($, HappyImage, lazyload) {
+define(['jquery', 'HappyImage', 'lazyload', 'cookie'], function($, HappyImage, lazyload, cookie) {
     return {
         //数据渲染
-        render: function() {
+        render: function(callback) {
             $.ajax({
                 type: "get",
                 url: `${baseUrl}/interface/getall.php`,
@@ -50,6 +50,13 @@ define(['jquery', 'HappyImage', 'lazyload'], function($, HappyImage, lazyload) {
                 let index = $('.headhover').index(this);
                 $(this).removeClass('changeOpacity').siblings().addClass('changeOpacity');
             });
+        },
+        //修改右上角购物车数量显示
+        carnum: function() {
+            let coo = cookie.get('shop');
+            coo = JSON.parse(coo)
+            console.log(coo.length)
+            $('.carnum').html(coo.length)
         }
     }
 

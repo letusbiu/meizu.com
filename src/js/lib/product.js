@@ -202,6 +202,13 @@ define(['jquery', 'lazyload', 'cookie'], function($, lazyload, cookie) {
             }
 
             cookie.set('shop', JSON.stringify(shop), 1);
+        },
+        //修改右上角购物车数量显示
+        carnum: function() {
+            let coo = cookie.get('shop');
+            coo = JSON.parse(coo)
+            console.log(coo.length)
+            $('.carnum').html(coo.length)
         }
     }
 });

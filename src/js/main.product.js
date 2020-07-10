@@ -35,4 +35,5 @@ require(['product', 'cookie'], function(product, cookie) {
         })
     });
     product.lazyload();
+    product.carnum();
 });

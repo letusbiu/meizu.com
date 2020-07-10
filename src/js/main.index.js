@@ -3,7 +3,8 @@ require.config({
         jquery: './jquery.min',
         index: './lib/index',
         HappyImage: './HappyImage.min',
-        lazyload: './jquery.lazyload'
+        lazyload: './jquery.lazyload',
+        cookie: './cookie'
     },
     shim: {
         HappyImage: ['jquery'],
@@ -18,5 +19,5 @@ require(['index'], function(index) {
     index.slider();
     index.lazyload();
     index.hover();
-    // index.fadeIn();
+    index.carnum()
 });
