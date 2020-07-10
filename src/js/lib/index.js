@@ -54,9 +54,10 @@ define(['jquery', 'HappyImage', 'lazyload', 'cookie'], function($, HappyImage, l
         //修改右上角购物车数量显示
         carnum: function() {
             let coo = cookie.get('shop');
-            coo = JSON.parse(coo)
-            console.log(coo.length)
-            $('.carnum').html(coo.length)
+            if (coo) {
+                coo = JSON.parse(coo)
+                $('.carnum').html(coo.length)
+            }
         }
     }
 

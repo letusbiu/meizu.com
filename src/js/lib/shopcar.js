@@ -160,6 +160,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                         $('.exit').on('click', function() {
                             //删除cookie  刷新页面 即可实现
                             cookie.remove('user');
+                            cookie.remove('shop');
                             location.href = "http://localhost/meizu.com/src/html/index.html"
                         });
                         //调用回调，设置打开页面后 所有复选框都处于被选中的状态
